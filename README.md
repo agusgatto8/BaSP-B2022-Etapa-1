@@ -18,8 +18,17 @@ We will be able to carry out a better control in the tasks that each employee pe
 
 ## Technologies used for its development:
 
--HTML
+- HTML
+
+- CSS
+
 #
+
+## Development process
+
+W-01 - We create the index.html file with all the necessary elements.
+
+W-02 - We style the index.html file with CSS.
 
 ## By GigaTech Software Solutions
 
