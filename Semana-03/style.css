@@ -15,13 +15,24 @@ h2{
     text-align: center;
 }
 
+h4{
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
 header{
-    color: white;
-    background-color: #373867;
     float: right;
     width: 80%;
     height: 225px;
     left: 335px;
+    background-color: #373867;
+    color: white;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -37,34 +48,37 @@ header .title{
 }
 
 header .icons{
-    float: right;
     padding: 20px;
+    float: right;
 }
 
 
 aside{
-    color: white;
-    background-color: #707070;
-    width: 20%;
-    float: right;
     position: absolute;
     display: inline-block;
+    color: white;
+    width: 20%;
     height: 100%;
     padding-bottom: 1320px;
+    background-color: #707070;
 }
 
 
 
 main{
-    background-color: #D9D9D9;
-    float: right;
     width: 80%;
     padding-top: 65px;
+    float: right;
+    background-color: #D9D9D9;
+}
+
+form{
+    
 }
 
 .text-1{
-    color: #373867;
-    background-color:#AACE9B;
+    display: inline;
+    position: absolute;
     float: right;
     padding: 30px 20px 30px 20px;
     margin-right: 0px;
@@ -72,10 +86,10 @@ main{
     margin-top: 330px;
     width: 300px;
     right: 0;
-    display: inline;
-    position: absolute;
+    background-color:#AACE9B;
     opacity: 80%;
     border-radius: 8% 0 0 8%;
+    color: #373867;
 }
 
 .paragraph-1{
@@ -89,17 +103,15 @@ main{
 .photo-main{
     border-radius: 0 8% 8% 0;
 }
-
 .section-track{
+    display: inline-block;
+    padding: 30px;
+    margin-left: 20px;
+    width: 60%;  
     color: #373867;
     font-size: 20px;
     text-align: center;
     line-height: 45px;
-    padding: 30px;
-    margin-left: 20px;
-    width: 60%;
-    display: inline-block;
-    
 }
 
 .bubble{
@@ -110,14 +122,14 @@ main{
 }
 
 .art-bubble-l{
-    font-weight: 400;
-    background-color: #373867;
-    border-radius: 100%;
     margin-top: 20px;
     margin-right: 180px;
     padding: 30px;
     width: 80px;
+    background-color: #373867;
+    border-radius: 100%;
     border: 10px solid #707070;
+    font-weight: 400;
 }
 
 .span-1{
@@ -125,14 +137,14 @@ main{
 }
 
 .art-bubble-r{
-    font-weight: 400;
-    background-color: #373867;
-    border-radius: 100%;
     margin-top: 20px;
     margin-left: 135px;
     padding: 30px;
     width: 80px;
+    background-color: #373867;
+    border-radius: 100%;
     border: 10px solid #707070;
+    font-weight: 400;
 }
 
 .service{
@@ -142,9 +154,16 @@ main{
 .article-service{
     display: inline-block;
     padding: 20px;
+    margin: 15px;
+    width: 170px;
+    height: 170px;
     background-color: #AACE9B;
-    margin: 10px;
-    border-radius: 10%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.article-service p{
+    padding-top: 50px;
 }
 
 .section-history{
@@ -153,23 +172,24 @@ main{
 }
 
 .history{
-    background-color: #D9D9D9; 
     display: inline-block;
-    border-radius: 1%;
     margin-top: 50px;
     margin-left: 100px;
     margin-right: 100px;
     padding: 60px;
+    background-color: #D9D9D9;
+    border-radius: 1%; 
+    opacity: 50%;
     text-align: center;
     font-size: 18px;
     line-height: 50px;
-    opacity: 80%;
 }
 
 .h3-how{
     color: #373867;
     font-size: 26px;
     font-weight: 700;
+    text-align: center;
 }
 
 .history p{
@@ -181,41 +201,60 @@ main{
 }
 
 .request{
-    background-color: #707070;
     display: inline-block;
     margin-top: 30px;
-    margin-right: 50px;
+    margin-left: 35%;
+    margin-bottom: 10px;
+    padding: 20px;
+    background-color: white;
+    text-align: left;
 }
-
-
-
-
+.request h3{
+    font-size: 22px;
+    color: black;
+    font-weight: 700;
+}
+.request p{
+    padding-top: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
 section .product{
     display: block;
-    background-color: aqua;
-    
-    
+    margin-left: 10%;
+    background-color: white;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
 }
 
 .article-product{
-    background-color: #707070;
-    text-align: center;
-    float: left;
     width: 20%;
-    position: relative;
+    padding-left: 50px;
+    float: left;
+    background-color: white;
+    text-align: center;
 }
 
 footer{
-    background-color: #373867;
     float: right;
     width: 100%;
     height: 180px;
+    background-color: #373867;
+    box-sizing: border-box;
     text-align: center;
-    box-sizing: border-box
 }
 
 .footer-section{
-    color: white;
     padding-top: 55px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
 }
 
+.p-footer{
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
