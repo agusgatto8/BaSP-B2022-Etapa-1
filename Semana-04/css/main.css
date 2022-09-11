@@ -1,71 +1,3 @@
-*{
-    font-family: 'Roboto', sans-serif;
-}
-
-aside{
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    background-color: #707070;
-    color: black;
-    display: none;
-}
-.pingo{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    background-color: #707070;
-    color: black;
-    margin: 10px;
-}
-a{
-    color: white;
-    text-decoration: none;
-    line-height: 2;
-}
-.contact{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    text-align: center;
-    background-color: #707070;
-    color: white;
-    margin: 10px;
-}
-.contact h4{
-    font-weight: 700;
-    text-align: center;
-    margin: 10px;
-}
-
-.photo-main{
-    border-radius: 0 0 10% 20%;
-    width: 100%;
-}
-
-
-.container{
-    display: flex;
-    flex-direction: column;
-}
-
-.header-nav{
-    background-color: #373867;
-}
-
-nav{
-    display: flex;
-    justify-content: end;
-}
-
-.icon-menu{
-    filter: invert();
-}
-
-
-
 main{
     display: flex;
     flex-direction: column;
@@ -156,19 +88,23 @@ main{
 /* CUADRADOS VERDES */
 .service{
     display: flex;
-    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 
 .article-service{
+    text-align: center;
     border-radius: 15px;
     width: 140px;
     height: 140px;
-    margin: 15px;
+    margin: 13px;
     background-color: #AACE9B;
 }
 
+.service p{
+    margin-top: 25px;
+}
 
 /* HISTORIA */
 .section-history{
@@ -180,7 +116,7 @@ main{
 .history{
     text-align: center;
     flex-wrap: wrap;
-    background-color: #d9d9d9;
+    background-color: #d9d9d947;
     border-radius: 10px;
 }
 
@@ -217,6 +153,7 @@ main{
         font-weight: bold;
         text-align: justify;
         margin-bottom: 10px;
+        margin-top: 30px;
         
     }
 
@@ -263,7 +200,7 @@ main{
 .product{
     display: flex;
     justify-content: space-around;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 20px;
 }
 
@@ -278,13 +215,42 @@ main{
     line-height: 12px;
 }
 
+/* AREA DE CONTACTO */
 
-/* FOOTER */
-
-footer{
+.contact{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 170px;
-    background-color: #373867;
+    background-color: white;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.contact section{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 40px;
+}
+
+.contact h4{
+    text-align: start;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-left: 50px;
+}
+
+.contact img{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    filter: invert();
+    width: 8%;
+}
+
+.contact p{
+    color: black;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 12px;
 }
