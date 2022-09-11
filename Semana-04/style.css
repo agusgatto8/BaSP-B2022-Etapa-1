@@ -67,6 +67,8 @@ nav{
 
 
 main{
+    display: flex;
+    flex-direction: column;
     background-color: #373867;
 }
 
@@ -84,9 +86,41 @@ main{
     margin-right: 10px;
 }
 
+.clase-pete{
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    margin-left: 20px;
+    letter-spacing: 1px;
+    color: #AACE9B;
+    font-weight: bold;
+}
 
-.keep{
-    color: white;
+.icons{
+    display: none;
+}
+
+.text-one{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 40px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+    width: 80%;
+    height: 170px;
+    border-radius: 60px;
+    background-color: #AACE9B;
+}
+.paragraph-1{
+    text-align: center;
+    color: #373867;
+    font-size: 18px;
+    padding: 20px 12px 20px 12px;
+    line-height: 1.6;
+    
+
 }
 
 
