@@ -119,9 +119,30 @@ main{
     font-size: 18px;
     padding: 20px 12px 20px 12px;
     line-height: 1.6;
-    
+}    
 
+.section-track{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: white;
+    width: 70%;
+    margin-left: 70px;
 }
+
+.section-track h2{
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+.section-track p{
+    margin-bottom: 10px;
+}
+
 
 
 
