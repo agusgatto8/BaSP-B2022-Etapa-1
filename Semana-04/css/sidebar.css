@@ -9,7 +9,7 @@ aside{
     color: black;
     display: none;
 }
-.pingo{
+.sidebar-home{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -37,4 +37,18 @@ a{
     margin: 10px;
 }
 
+
+
+@media screen and (min-width: 1024px){
+    aside{
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        height: 100%;
+        background-color: #707070;
+        color: black;
+    }
+
+}
 
