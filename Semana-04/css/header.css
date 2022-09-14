@@ -23,6 +23,10 @@ nav{
     display: flex;
     justify-content: flex-end;
 }
+
+.icons-desktop{
+    display: none;
+}
 .title{
     order: 1;
 }
@@ -36,7 +40,9 @@ nav{
         justify-content: flex-start;
         margin-left: 15px;
     }
-    
+    .icons-desktop{
+        display: none;
+    }
     .photo-main{
     display: none;
    }
@@ -66,12 +72,15 @@ nav{
 }
 
 @media screen and (min-width: 1024px){
-   
     .icon-menu{
         filter: invert();
         display: none;
     }
     .title p{
         background-color: #373867;
+    }
+    .icons-desktop{
+        display: flex;
+        margin-left: 80%;
     }
 }

@@ -4,7 +4,6 @@ aside{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
     background-color: #707070;
     color: black;
     display: none;
@@ -41,14 +40,30 @@ a{
 
 @media screen and (min-width: 1024px){
     aside{
-        font-family: 'Roboto', sans-serif;
+        display: flex;
+        width: 20%;
+    }
+    
+    .sidebar-home{
+        align-items: flex-start;
+        padding: 10px;
+    }
+    .sidebar-home input{
+        height: 45px;
+    }
+    .sidebar-home img{
+        margin-top: 30px;
+        width: 7%;
+    }
+    .contact-1{
         display: flex;
         flex-direction: column;
-        width: 20%;
-        height: 100%;
+        margin-bottom: 30px;
         background-color: #707070;
-        color: black;
     }
 
+    .contact-1 img{
+        width: 7%;
+    }
 }
 
