@@ -1,9 +1,17 @@
+// SECTION A//
 
+var aleatorio = Math.random(0,1);
+
+if(aleatorio >= 0.5){
+    alert("Greater than 0,5");
+} else{
+    alert("Lower than 0,5")
+}
 
 
 
 // SECTION B//
-var ageOne = 18;
+/*var ageOne = 18;
 
 if(ageOne < 2){
     alert("Bebe");
@@ -19,4 +27,4 @@ if(ageOne < 2){
     alert("Adulto mayor");
 } else {
     alert("Anciano");
-}
+} */
