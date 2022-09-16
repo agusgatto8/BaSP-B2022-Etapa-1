@@ -1,5 +1,5 @@
 // SECTION A//
-
+/*
 var myVarUp = "This is a string";
 myVarUp = myVarUp.toUpperCase();
 console.log("Exercise 2-A: " + myVarUp)
@@ -40,3 +40,4 @@ var sectionR = sectionF.substring(8,9).toUpperCase(8);
 var subStringR = sectionF.substring(9,13).toLowerCase();
 var space = sectionF.indexOf(" ");
 console.log("Exercise 2-F: " + subSectionF + subStringF + sectionR + subStringR + " the index of the space is: " + space);
+*/
