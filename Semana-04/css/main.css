@@ -28,8 +28,8 @@ main{
 /* TEXTO VERDE */
 
 .container-image-2 p{
-    font-family: 'Roboto', sans-serif;
-    /* padding: 20px; */
+    font-family: 'Roboto', sans-serif; 
+    margin-top: 30px;
     margin-bottom: 10px;
     font-size: 16px;
     margin-left: 20px;
@@ -48,9 +48,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 40px;
-    margin-right: 20px;
-    margin-bottom: 40px;
+    margin: 50px 20px 40px 40px;
     width: 80%;
     height: 170px;
     border-radius: 60px;
@@ -492,7 +490,10 @@ main{
     .form-1{
         width: 50%;
     }
+    .product{
+        margin-bottom: 70px;
+    }
     .contact-2{
-
+        display: none;
     }
 }

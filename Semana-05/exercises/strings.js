@@ -1,6 +1,6 @@
 // SECTION A//
 
-/*var myVarUp = "This is a string";
+var myVarUp = "This is a string";
 myVarUp = myVarUp.toUpperCase();
 console.log("Exercise 2-A: " + myVarUp)
 
@@ -13,7 +13,7 @@ console.log("Excercise 2-B: " + subRandomVar);
 //SECTION C//
 
 var sectionC = "abcdefghij";
-var subSectionC = sectionC.substring(6,9);
+var subSectionC = sectionC.substring(7,10);
 console.log("Exercise 2-C: " + subSectionC);
 
 // SECTION D //
@@ -28,7 +28,7 @@ console.log("Exercise 2-D: " + subSectionD + subStringD);
 var spaceFree = "abcde fghij";
 var spaceFreeE = spaceFree.indexOf(" ");
 console.log("Exercise 2-E: " + spaceFreeE);
-*/
+
 
 // SECTION F//
 

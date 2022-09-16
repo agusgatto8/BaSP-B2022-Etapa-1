@@ -8,6 +8,11 @@ aside{
     color: black;
     display: none;
 }
+a{
+    color: white;
+    text-decoration: none;
+    line-height: 2;
+}
 .sidebar-home{
     display: flex;
     flex-direction: column;
@@ -15,11 +20,6 @@ aside{
     background-color: #707070;
     color: black;
     margin: 10px;
-}
-a{
-    color: white;
-    text-decoration: none;
-    line-height: 2;
 }
 .contact{
     display: flex;
