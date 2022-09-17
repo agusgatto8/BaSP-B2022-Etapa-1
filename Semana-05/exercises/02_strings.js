@@ -1,6 +1,6 @@
 // SECTION A//
-/*
-var myVarUp = "This is a string";
+
+/*var myVarUp = "This is a string";
 myVarUp = myVarUp.toUpperCase();
 console.log("Exercise 2-A: " + myVarUp)
 
