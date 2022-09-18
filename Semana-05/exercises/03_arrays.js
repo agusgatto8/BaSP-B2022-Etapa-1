@@ -32,7 +32,7 @@ console.log(myArrayB);*/
     // SECTION E//
 
 /*var myArrayE = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio",
-"Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+    "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
     myArrayE.reverse();
     console.log(myArrayE);*/
 
