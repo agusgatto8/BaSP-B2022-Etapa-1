@@ -6,7 +6,7 @@ console.log("Exercise 6.a: ");
 function suma(param1, param2){
     return param1 + param2;
 };
-var sumaFunction = suma(5,6);
+var sumaFunction = suma(5, 9);
 console.log(sumaFunction);
 
 //b. A la función suma anterior, agregarle una validación para controlar si alguno de los parámetros no es un número;
@@ -14,25 +14,51 @@ console.log(sumaFunction);
 //el valor NaN como resultado.
 console.log("Exercise 6.b: ");
 function suma(param1, param2){
-    typeof (param1);
-    typeof (param2);
     if (typeof(param1) != "number"){
+        alert("One of the parameters has an error");
+        return "NaN";
+    } else if(typeof(param2) != "number"){
         alert("One of the parameters has an error");
         return "NaN";
     } else{
         return param1 + param2;
-    };
 };
+};
+var sumaVerification = suma(5, "hola");
+console.log(sumaVerification);
 
-//Aparte, crear una función validate Integer que reciba un número como parámetro y devuelva
+//c. Aparte, crear una función validate Integer que reciba un número como parámetro y devuelva
 //verdadero si es un número entero.
 console.log("Exercise 6.c: ");
-function validate(numer1){
-    if(Number.isInteger(numer1)){
+function validate(numer1, numer2){
+    if(Number.isInteger(numer1 && numer2)){
         return "true";
     } else{
         return "false";
     };
 };
-var myVarOneF = validate(6);
+var myVarOneF = validate(3, 6);
 console.log(myVarOneF);
+
+//d. A la función suma del ejercicio 6b) agregarle una llamada a la función del ejercicio 6c.
+//y que valide que los números sean enteros.
+//En caso que haya decimales mostrar un alerta con el error
+//y retornar el número convertido a entero (redondeado).
+/*console.log("Exercise 6.d: ");
+
+function suma(param1, param2){
+    validate(param1, param2);
+    if(myVarOneF = "false"){
+        alert("One of the parameters has an error sakdjsah");
+    }
+    if(typeof(param1) != "number"){
+        alert("One of the parameters has an error");
+        return "NaN";
+    } else if(typeof(param2) != "number"){
+        alert("One of the parameters has an error");
+        return "NaN";
+    } else{
+        return param1 + param2;
+};
+};*/
+
