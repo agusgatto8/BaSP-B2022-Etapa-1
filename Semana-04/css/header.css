@@ -1,29 +1,23 @@
 *{
     font-family: 'Roboto', sans-serif;
 }
-
 .photo-main{
     border-radius: 0 0 10% 20%;
     width: 100%;
 }
-
-
 .container{
     display: flex;
     flex-direction: column;
 }
-
 .header-nav{
     display: flex;
     flex-direction: column;
     background-color: #373867;
 }
-
 nav{
     display: flex;
     justify-content: flex-end;
 }
-
 .icons-desktop{
     display: none;
 }
@@ -33,7 +27,6 @@ nav{
 .icon-menu{
     filter: invert();
 }
-
 @media screen and (min-width: 480px) {
     nav{
         display: flex;
@@ -53,7 +46,6 @@ nav{
    }
    .title h1{
     display: flex;
-    align-items: flex-end;
     font-family: 'Roboto', sans-serif;
     height: 120px;
     font-size: 100px;
@@ -65,12 +57,10 @@ nav{
     height: 20px;
     background-color: white;
    }
-
-   .by-Giga{
+.by-Giga{
     width: 100%;
    }
 }
-
 @media screen and (min-width: 1024px){
     .icon-menu{
         filter: invert();

@@ -1,8 +1,8 @@
-console.log("EXERCISE 6: FUNCTIONS");
+console.log('EXERCISE 6: FUNCTIONS');
 //a. Crear una función suma que reciba dos valores numéricos y retorne el resultado.
 //Ejecutar la función y guardar el resultado en una variable,
 //mostrando el valor de dicha variable en la consola del navegador.
-console.log("Exercise 6.a: ");
+console.log('Exercise 6.a: ');
 function suma(param1, param2){
     return param1 + param2;
 };
@@ -12,24 +12,24 @@ console.log(sumaFunction);
 //b. A la función suma anterior, agregarle una validación para controlar si alguno de los parámetros no es un número;
 //de no ser un número, mostrar una alerta aclarando que uno de los parámetros tiene error y retornar
 //el valor NaN como resultado.
-console.log("Exercise 6.b: ");
+console.log('Exercise 6.b: ');
 function suma(param1, param2){
-    if (typeof(param1) != "number"){
-        alert("One of the parameters has an error B");
-        return "NaN";
-    } else if(typeof(param2) != "number"){
-        alert("One of the parameters has an error B");
-        return "NaN";
+    if (typeof(param1) != 'number'){
+        alert('One of the parameters has an error');
+        return 'NaN';
+    } else if(typeof(param2) != 'number'){
+        alert('One of the parameters has an error');
+        return 'NaN';
     } else{
         return param1 + param2;
 };
 };
-var sumaVerification = suma(5, "hola");
+var sumaVerification = suma(5, 'hola');
 console.log(sumaVerification);
 
 //c. Aparte, crear una función validate Integer que reciba un número como parámetro y devuelva
 //verdadero si es un número entero.
-console.log("Exercise 6.c: ");
+console.log('Exercise 6.c: ');
 function validate(numer1, numer2){
     if(Number.isInteger(numer1 && numer2)){
         return true;
@@ -44,19 +44,19 @@ console.log(myVarOneF);
 //y que valide que los números sean enteros.
 //En caso que haya decimales mostrar un alerta con el error
 //y retornar el número convertido a entero (redondeado).
-console.log("Exercise 6.d: ");
+console.log('Exercise 6.d: ');
 
 function suma(param1, param2){
-    if(typeof(param1) != "number"){
-        alert("One of the parameters has an error D");
-        return console.log("NaN");
-    } else if(typeof(param2) != "number"){
-        alert("One of the parameters has an error D");
-        return console.log("NaN");
+    if(typeof(param1) != 'number'){
+        alert('One of the parameters has an error');
+        return console.log('NaN');
+    } else if(typeof(param2) != 'number'){
+        alert('One of the parameters has an error');
+        return console.log('NaN');
     } else if(validate(param1, param2)){
          return console.log(param1 + param2);
     } else{
-        alert("hay un error");
+        alert('hay un error');
         console.log(Math.round(param1));
         console.log(Math.round(param2));
 };
