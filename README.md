@@ -22,13 +22,20 @@ We will be able to carry out a better control in the tasks that each employee pe
 
 - CSS
 
+- [Click me](https://agusgatto8.github.io/BaSP-B2022-Etapa-1/Semana-04)
 #
 
 ## Development process
 
-W-01 - We create the index.html file with all the necessary elements.
+W-01 - Create prototype Figma
 
-W-02 - We style the index.html file with CSS.
+W-02 - We create the index.html file with all the necessary elements.
+
+W-03 - We style the index.html file with CSS.
+
+W-04 - We create the responsive design.
+
+W-05 - Introduction to JavaScript.
 
 ## By GigaTech Software Solutions
 
