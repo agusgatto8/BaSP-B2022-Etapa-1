@@ -45,7 +45,6 @@ console.log(myVarOneF);
 //En caso que haya decimales mostrar un alerta con el error
 //y retornar el número convertido a entero (redondeado).
 console.log('Exercise 6.d: ');
-
 function suma(param1, param2){
     if(typeof(param1) != 'number'){
         alert('One of the parameters has an error');
@@ -57,19 +56,34 @@ function suma(param1, param2){
          return console.log(param1 + param2);
     } else{
         alert('There are decimal numbers');
-        console.log(Math.round(param1));
-        console.log(Math.round(param2));
+        console.log(Math.round(param1 + param2));
 };
-};
-
-function validate(numer1, numer2){
-    if(Number.isInteger(numer1 && numer2)){
-        return true;
-    } else{
-        return false;
-    };
 };
  suma(6, 10.7);
 
  //e. Convertir la validación del ejercicio 6d) en una función separada
 //y llamarla dentro de la función suma probando que todo siga funcionando igual.
+console.log('Exercise 6.e: ');
+function validateTotal(param1, param2){
+    if(typeof(param1) != 'number'){
+        alert('One of the parameters has an error');
+        return console.log('NaN');
+    } else if(typeof(param2) != 'number'){
+        alert('One of the parameters has an error');
+        return console.log('NaN');
+    } else if(validate(param1, param2)){
+         return console.log(param1 + param2);
+    } else{
+        alert('There are decimal numbers');
+        console.log(Math.round(param1 + param2));
+};
+};
+
+function suma2(param1, param2){
+    if(validateTotal(param1, param2)){
+        return param1 + param2;
+    } else{
+        console.log("Error E");
+    };
+};
+suma2(5, 9);
