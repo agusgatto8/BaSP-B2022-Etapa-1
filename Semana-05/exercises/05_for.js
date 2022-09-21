@@ -10,7 +10,12 @@ for (var i = 0; i < 5; i++){
 //b. Al array anterior convertir la primera letra de cada palabra
 // en mayúscula y mostrar una alerta por cada palabra modificada.
 console.log('Execise 5.b: ');
-
+for (var b = 0; b < myArrayFor.length; b++){
+    var oneletter = (myArrayFor[b].substring(1,0)).toUpperCase();
+    var oneletterB = (myArrayFor[b].substring(1)).toLowerCase();
+    myArrayFor[b] = oneletter + oneletterB;
+    alert(myArrayFor[b]);
+}
 
 //c. Crear una variable llamada “sentence” que tenga un string vacío,
 //luego al array del punto a) recorrerlo con un bucle for para ir guardando
@@ -20,8 +25,9 @@ console.log('Execise 5.c: ');
 var sentence = '';
 for (var r = 0; r < 5; r++){
     sentence = sentence + myArrayFor[r] + ' ';
+    alert(sentence + " C");
 }
-alert(sentence);
+
 
 //d. Crear una array vacío y con un bucle for de 10 repeticiones.
 //Llenar el array con el número de la repetición, es decir que al final de la ejecución
