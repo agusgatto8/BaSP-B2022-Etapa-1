@@ -56,7 +56,7 @@ function suma(param1, param2){
     } else if(validate(param1, param2)){
          return console.log(param1 + param2);
     } else{
-        alert('hay un error');
+        alert('There are decimal numbers');
         console.log(Math.round(param1));
         console.log(Math.round(param2));
 };

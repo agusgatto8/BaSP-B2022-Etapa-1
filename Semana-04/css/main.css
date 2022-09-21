@@ -20,7 +20,6 @@ main{
 .container-image-2 img{
     display: none;
 }
-/* TEXTO VERDE */
 .container-image-2 p{
     font-family: 'Roboto', sans-serif; 
     margin-top: 30px;
@@ -34,7 +33,6 @@ main{
 .icons{
     display: none;
 }
-/* BURBUJA VERDE */
 .text-one{
     display: flex;
     flex-direction: column;
@@ -52,7 +50,6 @@ main{
     padding: 20px 12px 20px 12px;
     line-height: 1.6;
 }    
-/* TEXTO WHY TRACKGENIX */
 .section-track{
     display: flex;
     flex-direction: column;
@@ -76,7 +73,6 @@ main{
 .bubble{
     display: none;
 }
-/* CUADRADOS VERDES */
 .service{
     display: flex;
     justify-content: center;
@@ -95,7 +91,6 @@ main{
     font-weight: bold;
     margin-top: 25px;
 }
-/* HISTORIA */
 .section-history{
     display: flex;
     flex-direction: column;
@@ -123,7 +118,6 @@ main{
     font-size: 14px;
     line-height: 24px;
 }
-/* FORM */
 .request{
     display: flex;
     flex-direction: column;
@@ -159,7 +153,6 @@ main{
             .contact-area fieldset{
                 margin: 10px;
             }
-        /* NO TOCAR!!!!! */
         .request textarea{
             font-size: 14px;
             height: 75px;
@@ -178,7 +171,6 @@ main{
         .history-tablet{
             display: none;
         }
-        /* PRODUCTOS */
 .product{
     display: flex;
     justify-content: space-around;
@@ -194,7 +186,6 @@ main{
     font-size: 14px;
     line-height: 12px;
 }
-/* AREA DE CONTACTO */
 .contact-2{
     display: flex;
     flex-direction: column;
@@ -243,13 +234,15 @@ main{
         border-radius: 0 70px 70px 0;
     }
     .container-image-2 p{
+        display: flex;
+        flex-wrap: wrap;
+        width: 60%;
         position: absolute;
         font-size: 30px;
         margin-top: 10px;
         color: #AACE9B;
         font-weight: bold;
     }
-    /* burbuja verde */
      .text-one{ 
         position: absolute;
         top: 72%;
@@ -268,7 +261,6 @@ main{
         padding: 20px 12px 20px 12px;
         line-height: 1.6;
     }    
-    /* HISTORIA Y BURBUJAS */
     .grand-section{
         display: flex;
     }
@@ -293,76 +285,74 @@ main{
         width: 30%;
         text-align: center;       
 }
-/* BURBUJAS */
-.art-bubble-l{
-    margin-top: 20px;
-    padding: 30px;
-    width: 80px;
-    background-color: #373867;
-    border-radius: 100%;
-    border: 10px solid #707070;
-    font-weight: 700;
-    color: white;
-}
-.span-1{
-    color: #AACE9B;
-}
-.art-bubble-r{
-    margin-top: 20px;
-    padding: 30px;
-    width: 80px;
-    background-color: #373867;
-    border-radius: 100%;
-    border: 10px solid #707070;
-    font-weight: 700;
-    color: white;
-}
-/* CUADRADOS VERDES */
-.service{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-bottom: 0;
-    background-color: white;
-}
-.article-service{
-    text-align: center;
-    border-radius: 15px;
-    width: 30%;
-    height: 280px;
-    margin: 30px 20px 60px 15px;    
-}
-.service p{
-    font-size: 30px;
-    font-weight: bold;
-    margin-top: 22%;
-    margin-bottom: 20px;
-}
-.history{
-    display: none;
-}
-.history-tablet{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 50px 50px 0 50px;
-    background-color: #d9d9d947;
-    border-radius: 10px;
-    padding: 0px 50px 20px 50px;
-}
-.history-tablet h3{
-    font-size: 30px;
-    margin-left: 20%;
-    font-weight: 700;
-}
-.history-tablet p{
-    letter-spacing: 1.6;
-    line-height: 20px;
-}
-.contact{
-    align-items: center;
-}
-}
+    .art-bubble-l{
+        margin-top: 20px;
+        padding: 30px;
+        width: 80px;
+        background-color: #373867;
+        border-radius: 100%;
+        border: 10px solid #707070;
+        font-weight: 700;
+        color: white;
+    }
+    .span-1{
+        color: #AACE9B;
+    }
+    .art-bubble-r{
+        margin-top: 20px;
+        padding: 30px;
+        width: 80px;
+        background-color: #373867;
+        border-radius: 100%;
+        border: 10px solid #707070;
+        font-weight: 700;
+        color: white;
+    }
+    .service{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+        background-color: white;
+    }
+    .article-service{
+        text-align: center;
+        border-radius: 15px;
+        width: 30%;
+        height: 280px;
+        margin: 30px 20px 60px 15px;    
+    }
+    .service p{
+        font-size: 30px;
+        font-weight: bold;
+        margin-top: 22%;
+        margin-bottom: 20px;
+    }
+    .history{
+        display: none;
+    }
+    .history-tablet{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 50px 50px 0 50px;
+        background-color: #d9d9d947;
+        border-radius: 10px;
+        padding: 0px 50px 20px 50px;
+    }
+    .history-tablet h3{
+        font-size: 30px;
+        margin-left: 20%;
+        font-weight: 700;
+    }
+    .history-tablet p{
+        letter-spacing: 1.6;
+        line-height: 20px;
+    }
+    .contact{
+        align-items: center;
+    }
+    }
 @media screen and (min-width: 1024px){
     .container-image-2{
         background-color: #d9d9d9;
@@ -416,13 +406,12 @@ main{
     }
     .history{
         display: flex;
-        flex-direction: column;
         margin: 50px 100px 10px 100px;
-        height: 600px;
     }
     .history h3{
         text-align: center;
         color: #373867;
+        width: 100%;
     }
     .history p{
         font-size: 24px;
