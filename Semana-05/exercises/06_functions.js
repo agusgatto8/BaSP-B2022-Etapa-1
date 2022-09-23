@@ -86,4 +86,4 @@ function suma2(param1, param2){
         console.log("Error E");
     };
 };
-suma2(5, 9);
+console.log(suma2(5, "hola"));
