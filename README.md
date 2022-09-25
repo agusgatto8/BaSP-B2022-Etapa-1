@@ -22,6 +22,8 @@ We will be able to carry out a better control in the tasks that each employee pe
 
 - CSS
 
+- JavaScript
+
 - [Click me](https://agusgatto8.github.io/BaSP-B2022-Etapa-1/Semana-04)
 #
 
@@ -36,6 +38,8 @@ W-03 - We style the index.html file with CSS.
 W-04 - We create the responsive design.
 
 W-05 - Introduction to JavaScript.
+
+W-06 - Validations of login and sign up to JavaScript.
 
 ## By GigaTech Software Solutions
 
