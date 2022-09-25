@@ -75,6 +75,12 @@ button{
 .sign-up{
     display: none;
 }
+.border-red{
+    border: 2px solid red;
+}
+.border-color{
+    border: 2px solid green;
+}
 
 @media screen and (max-width: 480px){
     main{

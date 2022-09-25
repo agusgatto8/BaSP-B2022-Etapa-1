@@ -73,10 +73,9 @@ button{
 .sign-up{
     display: none;
 }
-.green-border{
-    border: 5px solid red;
+.red-border{
+    border: 2px solid red;
 }
-
 @media screen and (max-width: 480px){
     main{
         display: flex;
