@@ -1,5 +1,4 @@
 window.onload = function() {
- // BLUR
 
     var emailEnter = document.getElementById('emailEnter');
     emailEnter.onblur = function(){
