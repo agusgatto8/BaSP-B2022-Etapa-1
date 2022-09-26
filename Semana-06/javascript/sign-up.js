@@ -120,12 +120,31 @@ inputPostal.onblur = function(){
     } else{
         console.log("Postal code failed");
         inputPostal.classList.add("border-red");
+        inputPostal.value.classList.add("border-red");
     }
 };
 inputPostal.onfocus = function(){
     inputPostal.classList.remove("red-border");
 };
 
+//Validate 
+
+
+var inputEmail = document.getElementById("input-email");
+    inputEmail.onblur = function(){
+    var expValEmail =  /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+    var emailValidate = expValEmail.test(inputEmail.value);
+    if (emailValidate == true){
+        console.log("nombre correcto");
+        inputEmail.classList.add("border-color");
+    } else{
+        console.log("Nombre incorrecto");
+        inputEmail.classList.add("border-red");
+    }
+};
+inputEmail.onfocus = function(){
+    inputEmail.classList.remove("red-border");
+};
 
 
 

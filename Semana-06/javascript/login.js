@@ -13,7 +13,7 @@ window.onload = function() {
     };
         emailEnter.onfocus = function(){
             emailEnter.classList.remove("red-border");
-        };
+    };
     var passwordEnter = document.getElementById('passwordEnter');
     passwordEnter.onblur = function(){
         expRegPassword = /^["a-zA-Z"0-9]{8,20}$/;
