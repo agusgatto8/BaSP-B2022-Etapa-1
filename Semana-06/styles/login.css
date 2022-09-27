@@ -45,8 +45,10 @@ button{
     background-color: #373867;
     color: white;
     font-size: 18px;
-    border: none;
-    
+    border: none; 
+}
+button:hover{
+    background-color: #70709c;
 }
 .image-principal{
     width: 60%;
