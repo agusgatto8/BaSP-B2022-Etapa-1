@@ -76,7 +76,7 @@ inputPhone.onfocus = function(){
 
 var inputAdress = document.getElementById("input-adress");
 inputAdress.onblur = function(){
-    var expValAdress = (/^["a-zA-Z"0-9]{5,20}$/);
+    var expValAdress = (/^["a-zA-Z"0-9 ]{5,20}$/);
     var adressValidate = expValAdress.test(inputAdress.value);
     if (adressValidate == true){
         console.log("adress approval");
@@ -127,7 +127,7 @@ inputPostal.onfocus = function(){
     inputPostal.classList.remove("red-border");
 };
 
-//Validate 
+//Validate Email
 
 
 var inputEmail = document.getElementById("input-email");
@@ -143,16 +143,44 @@ var inputEmail = document.getElementById("input-email");
     }
 };
 inputEmail.onfocus = function(){
-    inputEmail.classList.remove("red-border");
+    inputEmail.classList.remove("border-red");
 };
 
+//VALIDATE PASSWORD 1
 
+var inputPassword = document.getElementById('input-password');
 
+inputPassword.onblur = function(){
+        expPassword = /^["a-z"0-9]{8,20}$/;
+        var validatePassword1 = expPassword.test(inputPassword.value);
+        if (validatePassword1 == true){
+            console.log("password correct");
+            inputPassword.classList.add("border-color")
+        } else{
+            console.log("error");
+            inputPassword.classList.add("border-red")
+        };
+    };
+     inputPassword.onfocus = function(){
+        inputPassword.classList.remove("border-color");
+        inputPassword.classList.remove("border-red");
+}; 
 
-
-
-
-
+// VALIDATE PASSWORD CONFIRMATION
+var inputRepeat = document.getElementById("input-repeat") ;
+inputRepeat.onblur = function(){
+    if (inputRepeat.value === inputPassword.value){
+        console.log("Coinciden");
+        inputRepeat.classList.add("border-color")
+    } else{
+        console.log("No coinciden");
+        inputRepeat.classList.add("border-red")
+    };
+};
+inputRepeat.onfocus = function(){
+    inputRepeat.classList.remove("border-color");
+    inputRepeat.classList.remove("border-red");
+}; 
 
 
 
