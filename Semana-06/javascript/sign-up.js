@@ -165,4 +165,27 @@ window.onload = function(){
         inputRepeat.classList.remove('border-color');
         inputRepeat.classList.remove('border-red');
     };
+
+
+    var buttonForm = document.getElementById("button-form");
+    buttonForm.onclick = function(e){
+        e.preventDefault();
+        var arrayButtom = []
+        if (expVal.test(firsName.value) && expValTwo.test(lastName.value) && expValDni.test(inputDni.value)
+         && expValPhone.test(inputPhone.value) && expValAdress.test(inputAdress.value) && 
+         expValLocation.test(inputLocation.value) && expValPostal.test(inputPostal.value) && 
+         expValEmail.test(inputEmail.value) && expPassword.test(inputPassword.value)){
+            arrayButtom.push('Name: ' + (firsName.value) +'\n' + 'Last name: ' + (lastName.value + '\n'));
+            arrayButtom.push('Dni: ' + (inputDni.value) +'\n' + 'Phone: ' + (inputPhone.value +'\n'));
+            arrayButtom.push('Adress: ' + (inputAdress.value) +'\n' + 'Location: ' + (inputLocation.value + '\n'));
+            arrayButtom.push('Postal code: ' + (inputPostal.value) +'\n' + 'Email: ' + (inputEmail.value + '\n'));
+            arrayButtom.push('Password: ' + (inputPassword.value) +'\n' + 'Password confirmation: ' +  (inputRepeat.value + '\n'));
+            alert(arrayButtom);
+    } else if(expVal.test(firsName.value) || expValTwo.test(lastName.value) || expValDni.test(inputDni.value)
+    || expValPhone.test(inputPhone.value) || expValAdress.test(inputAdress.value) || 
+    expValLocation.test(inputLocation.value) || expValPostal.test(inputPostal.value) || 
+    expValEmail.test(inputEmail.value) || expPassword.test(inputPassword.value)){
+            alert('One or more fields are not correct');
+        }
+    };
 };
