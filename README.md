@@ -24,7 +24,7 @@ We will be able to carry out a better control in the tasks that each employee pe
 
 - JavaScript
 
-- [Click me](https://agusgatto8.github.io/BaSP-B2022-Etapa-1/Semana-04)
+- [Click me](https://agusgatto8.github.io/BaSP-B2022-Etapa-1/Semana-06/views/index.html)
 #
 
 ## Development process
