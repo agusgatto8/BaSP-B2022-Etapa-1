@@ -186,6 +186,8 @@ window.onload = function(){
     expValLocation.test(inputLocation.value) || expValPostal.test(inputPostal.value) || 
     expValEmail.test(inputEmail.value) || expPassword.test(inputPassword.value)){
             alert('One or more fields are not correct');
+        } else{
+            alert('Please complete all fields!');
         }
     };
 };
