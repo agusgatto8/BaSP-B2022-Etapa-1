@@ -73,7 +73,8 @@ button:hover{
     width: 20px;
 }
 .sign-up{
-    display: none;
+    display: flex;
+    flex-direction: column;
 }
 .red-border{
     border: 2px solid red;

@@ -53,25 +53,33 @@ window.onload = function() {
         var username = emailEnter.value
         var password = passwordEnter.value
 
-        console.log('Username: ', username, ' Password: ', password)
-        var url = `https://basp-m2022-api-rest-server.herokuapp.com/login?email=${emailEnter.value}&password=${passwordEnter.value}`;
-       if(username != 'rose@radiumrocket.com' || password != 'BaSP2022'){
-            alert('Username or password are incorrect!')
-       }else {
+        // console.log('Username: ', username, ' Password: ', password)
+        var url = `https://basp-m2022-api-rest-server.herokuapp.com/login?email=${username}&password=${password}`;
         fetch(url)
-            .then((response) => response.json())
-            .then((data) => console.log(data))
+            .then(function(response){
+                return response.json()
+            })
+            .then(function(data) {
+                if(data.success == true){
+                    alert('Request success: ' + data.msg)
+                    localStorage.setItem('Email', emailEnter.value),
+                    localStorage.setItem('Password', passwordEnter.value)
+                } else if(data.errors == undefined) {
+                    alert('Request rejected: ' + data.msg);
+                } else{
+                    alert(data.msg)
+                }
+            })
             .catch(function(error){
                 alert('An error occurred: ', error)
             });
-        
-        };
-        };
+        };  
+};   
 
 
 
  
-};
+
 
 
 

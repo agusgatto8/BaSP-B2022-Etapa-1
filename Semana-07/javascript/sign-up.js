@@ -57,6 +57,11 @@ window.onload = function(){
         inputDni.classList.remove('red-border');
     };    
 
+   var inputDob = document.getElementById('date-of-birth');
+    inputDob.onblur = function(){
+        inputDob.classList.add('border-color')
+     };
+
     var inputPhone = document.getElementById('input-phone');
     inputPhone.onblur = function(){
         var phoneValidate = expValPhone.test(inputPhone.value);
@@ -159,6 +164,7 @@ window.onload = function(){
             inputRepeat.classList.add('border-color')
         } else{
             inputRepeat.classList.add('border-red')
+            alert('Password incorrect')
         };
     };
     inputRepeat.onfocus = function(){
@@ -170,7 +176,10 @@ window.onload = function(){
     buttonForm.onclick = function(e){
         e.preventDefault();
         var arrayButtom = []
-        var url = `https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${firsName.value}&lastname=${lastName.value}&dni=${inputDni.value}&phone=${inputPhone.value}&address=${inputAdress.value}&city=${inputLocation.value}&zip=${inputPostal.value}&email=${inputEmail.value}&password=${inputPassword.value}`
+        var dob = inputDob.value.split('-')
+        var dob2 = dob[1] + '/' + dob[2] + '/' + dob[0]
+        var url = `https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${firsName.value}&lastName=${lastName.value}&dni=${inputDni.value}&dob=${dob2}&phone=${inputPhone.value}&address=${inputAdress.value}&city=${inputLocation.value}&zip=${inputPostal.value}&email=${inputEmail.value}&password=${inputPassword.value}`
+
         if (expVal.test(firsName.value) && expValTwo.test(lastName.value) && expValDni.test(inputDni.value)
          && expValPhone.test(inputPhone.value) && expValAdress.test(inputAdress.value) && 
          expValLocation.test(inputLocation.value) && expValPostal.test(inputPostal.value) && 
@@ -180,20 +189,49 @@ window.onload = function(){
             arrayButtom.push('Adress: ' + (inputAdress.value) +'\n' + 'Location: ' + (inputLocation.value + '\n'));
             arrayButtom.push('Postal code: ' + (inputPostal.value) +'\n' + 'Email: ' + (inputEmail.value + '\n'));
             arrayButtom.push('Password: ' + (inputPassword.value) +'\n' + 'Password confirmation: ' +  (inputRepeat.value + '\n'));
+            
+        } else if(expVal.test(firsName.value) || expValTwo.test(lastName.value) || expValDni.test(inputDni.value)
+        || expValPhone.test(inputPhone.value) || expValAdress.test(inputAdress.value) || 
+        expValLocation.test(inputLocation.value) || expValPostal.test(inputPostal.value) || 
+        expValEmail.test(inputEmail.value) || expPassword.test(inputPassword.value)){
+                alert('One or more fields are not correct');
+            } else{
+                alert('Please complete all fields!');
+            }
+
             fetch(url)
-                .then((response) => response.json())
-                .then((data) => console.log(data))
-                .catch(function(error){
-                    alert('An error occurred: ', error)
-                });
-                alert(arrayButtom)
-    } else if(expVal.test(firsName.value) || expValTwo.test(lastName.value) || expValDni.test(inputDni.value)
-    || expValPhone.test(inputPhone.value) || expValAdress.test(inputAdress.value) || 
-    expValLocation.test(inputLocation.value) || expValPostal.test(inputPostal.value) || 
-    expValEmail.test(inputEmail.value) || expPassword.test(inputPassword.value)){
-            alert('One or more fields are not correct');
-        } else{
-            alert('Please complete all fields!');
-        }
+            .then(function(response){
+                return response.json()
+            })
+            .then(function(data){
+                if(data.success == true){
+                    alert('Request success: ' + data.msg)
+                    localStorage.setItem('Name', firsName.value)
+                    localStorage.setItem('Lastname', lastName.value)
+                    localStorage.setItem('DNI', inputDni.value)
+                    localStorage.setItem('Date of birth day', inputDob.value)
+                    localStorage.setItem('Phone', inputPhone.value)
+                    localStorage.setItem('Address', inputAdress.value)
+                    localStorage.setItem('Location', inputLocation.value)
+                    localStorage.setItem('Zip', inputPostal.value)
+                    localStorage.setItem('Email', inputEmail.value)
+                    localStorage.setItem('Password', inputPassword.value)
+                } else if(data.errors == undefined){
+                    alert('Request rejected: ' + data.msg)
+                } else{
+                    alert(data.msg)
+                } 
+            })
+            .catch(function(error){
+                alert('An error occurred: ', error)
+            });
+
     };
+           
+
+
+
+
+
+                // alert(arrayButtom)
 };
