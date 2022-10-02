@@ -7,7 +7,7 @@ window.onload = function(){
     var expValLocation = (/^[A-Z]{3,20}$/i);
     var expValPostal = (/^[0-9]{4,5}$/);
     var expValEmail = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-    var expPassword = /^['a-z'0-9]{8,20}$/;
+    var expPassword = /^['a-zA-Z'0-9]{8,20}$/;
 
     var firsName = document.getElementById('first-name');
     firsName.onblur = function(){
@@ -113,8 +113,8 @@ window.onload = function(){
         } else if(inputPostal.value = ''){
             inputPostal.classList.add('border-red');
         } else{
-            inputPostal.classList.add('border-red');
-            inputPostal.value.classList.add('border-red');
+            inputPostal.classList.remove('border-red');
+            inputPostal.classList.add('border-color');
         };
     };
     inputPostal.onfocus = function(){
@@ -166,11 +166,11 @@ window.onload = function(){
         inputRepeat.classList.remove('border-red');
     };
 
-
     var buttonForm = document.getElementById("button-form");
     buttonForm.onclick = function(e){
         e.preventDefault();
         var arrayButtom = []
+        var url = `https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${firsName.value}&lastname=${lastName.value}&dni=${inputDni.value}&phone=${inputPhone.value}&address=${inputAdress.value}&city=${inputLocation.value}&zip=${inputPostal.value}&email=${inputEmail.value}&password=${inputPassword.value}`
         if (expVal.test(firsName.value) && expValTwo.test(lastName.value) && expValDni.test(inputDni.value)
          && expValPhone.test(inputPhone.value) && expValAdress.test(inputAdress.value) && 
          expValLocation.test(inputLocation.value) && expValPostal.test(inputPostal.value) && 
@@ -180,7 +180,13 @@ window.onload = function(){
             arrayButtom.push('Adress: ' + (inputAdress.value) +'\n' + 'Location: ' + (inputLocation.value + '\n'));
             arrayButtom.push('Postal code: ' + (inputPostal.value) +'\n' + 'Email: ' + (inputEmail.value + '\n'));
             arrayButtom.push('Password: ' + (inputPassword.value) +'\n' + 'Password confirmation: ' +  (inputRepeat.value + '\n'));
-            alert(arrayButtom);
+            fetch(url)
+                .then((response) => response.json())
+                .then((data) => console.log(data))
+                .catch(function(error){
+                    alert('An error occurred: ', error)
+                });
+                alert(arrayButtom)
     } else if(expVal.test(firsName.value) || expValTwo.test(lastName.value) || expValDni.test(inputDni.value)
     || expValPhone.test(inputPhone.value) || expValAdress.test(inputAdress.value) || 
     expValLocation.test(inputLocation.value) || expValPostal.test(inputPostal.value) || 

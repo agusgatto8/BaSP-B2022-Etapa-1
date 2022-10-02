@@ -53,14 +53,14 @@ window.onload = function() {
         var username = emailEnter.value
         var password = passwordEnter.value
 
-        console.log(username, password)
-        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login/?email=' + username + '&password=' + password
+        console.log('Username: ', username, ' Password: ', password)
+        var url = `https://basp-m2022-api-rest-server.herokuapp.com/login?email=${emailEnter.value}&password=${passwordEnter.value}`;
        if(username != 'rose@radiumrocket.com' || password != 'BaSP2022'){
             alert('Username or password are incorrect!')
        }else {
         fetch(url)
             .then((response) => response.json())
-            .then((data) => alert('Request success! '+ data))
+            .then((data) => console.log(data))
             .catch(function(error){
                 alert('An error occurred: ', error)
             });
