@@ -74,8 +74,9 @@ background-color: #70709c;
 .box{
     width: 20px;
 }
-.sign-up{
-    display: none;
+.log-in{
+    display: flex;
+    flex-direction: column;
 }
 .border-red{
     border: 2px solid red;

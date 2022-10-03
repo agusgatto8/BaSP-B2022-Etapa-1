@@ -216,14 +216,17 @@ window.onload = function(){
                     localStorage.setItem('Zip', inputPostal.value)
                     localStorage.setItem('Email', inputEmail.value)
                     localStorage.setItem('Password', inputPassword.value)
-                } else if(data.errors == undefined){
-                    alert('Request rejected: ' + data.msg)
                 } else{
-                    alert(data.msg)
-                } 
+                    var arrayErrors = []
+                    for(var i = 0; i < data.errors.length; i++){
+                        arrayErrors.push(data.errors[i].msg)
+                    }
+                    var errorMsg = arrayErrors.join('\n');
+                    alert('Request rejected: ' +  '\n' + errorMsg)
+                };  
             })
             .catch(function(error){
-                alert('An error occurred: ', error)
+                alert('An error occurred: '+ error)
             });
 
     };

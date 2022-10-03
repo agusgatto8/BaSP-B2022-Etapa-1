@@ -44,9 +44,6 @@ window.onload = function() {
             alert("Email and Password false");
        };
     };
-    // ENVIAR FORM
-
-    // var formulario = document.getElementById('form-signin');
 
     buttonForm.onclick = function(a){
         a.preventDefault();
@@ -67,13 +64,18 @@ window.onload = function() {
                 } else if(data.errors == undefined) {
                     alert('Request rejected: ' + data.msg);
                 } else{
-                    alert(data.msg)
+                    var errorLogin = [];
+                    for (let i = 0; i < data.errors.length; i++) {
+                        errorLogin.push(data.errors[i].msg);
+                    }
+                    var msgErrorLogin = errorLogin.join('\n');
+                    alert('Request rejected: ' + '\n' + msgErrorLogin);
                 }
             })
             .catch(function(error){
                 alert('An error occurred: ', error)
-            });
-        };  
+        });
+    };  
 };   
 
 
