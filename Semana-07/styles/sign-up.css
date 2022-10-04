@@ -47,6 +47,10 @@ button{
 button:hover{
 background-color: #70709c;
 }
+.title{
+    color: white;
+    text-decoration: none;
+}
 .image-principal{
     width: 50%;
     height: 600px;

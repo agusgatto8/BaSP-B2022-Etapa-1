@@ -50,6 +50,10 @@ button{
 button:hover{
     background-color: #70709c;
 }
+.title{
+    color: white;
+    text-decoration: none;
+}
 .image-principal{
     width: 60%;
     height: 30%;
@@ -67,14 +71,20 @@ button:hover{
 .check-data{
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 70%;
 }
 .box{
     width: 20px;
 }
-.sign-up{
+.link-singup{
     display: flex;
-    flex-direction: column;
+}
+.sign-up{
+  font-size: 14px;
+}
+.redirect{
+    text-decoration: none;
+    font-weight: bold;
 }
 .red-border{
     border: 2px solid red;
@@ -103,6 +113,11 @@ button:hover{
         font-size: 16px;
         font-weight: bold;
     }
+    .check-data{
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        width: 50%;
 }
 @media screen and (max-width: 1024px){
     .image-principal{
@@ -121,4 +136,5 @@ button:hover{
         height: 40px;
         border: none;
     }
-}
+    }
+};
