@@ -249,6 +249,6 @@ window.onload = function(){
             })
             .catch(function(error){
                 alert('An error occurred: '+ error);
-            });
+         });
     };
 };
