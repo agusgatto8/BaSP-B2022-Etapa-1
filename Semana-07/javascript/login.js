@@ -34,8 +34,32 @@ window.onload = function() {
   var buttonForm = document.getElementById('button-form');
    buttonForm.onclick = function(e){
         e.preventDefault();
+        var username = emailEnter.value;
+        var password = passwordEnter.value;
+        var url = `https://basp-m2022-api-rest-server.herokuapp.com/login?email=${username}&password=${password}`;
        if (expReg.test(emailEnter.value) && expRegPassword.test(passwordEnter.value)){
-           alert('Email: ' + emailEnter.value + "\n" + 'Password: ' + passwordEnter.value); 
+           alert('Email: ' + emailEnter.value + "\n" + 'Password: ' + passwordEnter.value);
+           fetch(url)
+           .then(function(response){
+               return response.json();
+           })
+           .then(function(data) {
+               if(data.success == true){
+                   alert('Request success: ' + data.msg);
+               } else if(data.errors == undefined) {
+                   alert('Request rejected: ' + data.msg);
+               } else{
+                   var errorLogin = [];
+                   for (let i = 0; i < data.errors.length; i++) {
+                       errorLogin.push(data.errors[i].msg);
+                   }
+                   var msgErrorLogin = errorLogin.join('\n');
+                   alert('Request rejected: ' + '\n' + msgErrorLogin);
+               }
+           })
+           .catch(function(error){
+               alert('An error occurred: ' + error);
+       });
        } else if(!expReg.test(emailEnter.value) && expRegPassword.test(passwordEnter.value)){
            alert('Email false');
        } else if(expReg.test(emailEnter.value) && !expRegPassword.test(passwordEnter.value)){
@@ -44,35 +68,8 @@ window.onload = function() {
             alert("Email and Password false");
        };
     };
-
-    buttonForm.onclick = function(a){
-        a.preventDefault();
-        var username = emailEnter.value;
-        var password = passwordEnter.value;
-        var url = `https://basp-m2022-api-rest-server.herokuapp.com/login?email=${username}&password=${password}`;
-        fetch(url)
-            .then(function(response){
-                return response.json();
-            })
-            .then(function(data) {
-                if(data.success == true){
-                    alert('Request success: ' + data.msg);
-                } else if(data.errors == undefined) {
-                    alert('Request rejected: ' + data.msg);
-                } else{
-                    var errorLogin = [];
-                    for (let i = 0; i < data.errors.length; i++) {
-                        errorLogin.push(data.errors[i].msg);
-                    }
-                    var msgErrorLogin = errorLogin.join('\n');
-                    alert('Request rejected: ' + '\n' + msgErrorLogin);
-                }
-            })
-            .catch(function(error){
-                alert('An error occurred: ' + error);
-        });
-    };
 };
+
 
 
 

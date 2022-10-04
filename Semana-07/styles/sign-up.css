@@ -78,9 +78,9 @@ background-color: #70709c;
 .box{
     width: 20px;
 }
-.log-in{
-    display: flex;
-    flex-direction: column;
+.redirect{
+   font-weight: bold;
+   text-decoration: none;
 }
 .border-red{
     border: 2px solid red;

@@ -24,7 +24,7 @@ We will be able to carry out a better control in the tasks that each employee pe
 
 - JavaScript
 
-- [Click me](https://agusgatto8.github.io/BaSP-B2022-Etapa-1/Semana-06/views/index.html)
+- [Click me](https://agusgatto8.github.io/BaSP-B2022-Etapa-1/Semana-07/views/index.html)
 #
 
 ## Development process
@@ -40,6 +40,8 @@ W-04 - We create the responsive design.
 W-05 - Introduction to JavaScript.
 
 W-06 - Validations of login and sign up to JavaScript.
+
+W-07 - Validations with server to fetch.
 
 ## By GigaTech Software Solutions
 
