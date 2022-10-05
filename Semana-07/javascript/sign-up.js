@@ -15,6 +15,7 @@ window.onload = function(){
         if (nameValidate == true){
             firsName.classList.add('border-color');
         } else if(firsName.value = ''){
+            firsName.classList.remove('border-color');
             firsName.classList.add('border-red');
         }else{
             firsName.classList.add('border-red');
@@ -31,6 +32,7 @@ window.onload = function(){
         if (lastNameValidate == true){
             lastName.classList.add('border-color');
         } else if(lastName.value = ''){
+            lastName.classList.remove('border-color')
             lastName.classList.add('border-red');
         } else{
         lastName.classList.add('border-red');
@@ -116,6 +118,7 @@ window.onload = function(){
         if (postalValidate == true){
             inputPostal.classList.add('border-color');
         } else if(inputPostal.value = ''){
+            inputPostal.classList.remove('border-color');
             inputPostal.classList.add('border-red');
         } else{
             inputPostal.classList.remove('border-red');
@@ -227,7 +230,7 @@ window.onload = function(){
             })
             .then(function(data){
                 if(data.success == true){
-                    alert('Request success: ' + data.msg);
+                    alert('Request success: ' + data.msg + '\n' + arrayButtom);
                     localStorage.setItem('Name', firsName.value);
                     localStorage.setItem('Lastname', lastName.value);
                     localStorage.setItem('DNI', inputDni.value);
