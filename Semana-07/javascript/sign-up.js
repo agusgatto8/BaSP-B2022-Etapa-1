@@ -176,9 +176,8 @@ window.onload = function(){
     };
 
     var buttonForm = document.getElementById("button-form");
-
     var nameStorage = localStorage.getItem('Name');
-    firsName.value = nameStorage;;
+    firsName.value = nameStorage;
     var lastNameStorage = localStorage.getItem('Lastname');
     lastName.value = lastNameStorage;
     var dniStorage = localStorage.getItem('DNI');

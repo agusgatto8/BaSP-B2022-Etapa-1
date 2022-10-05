@@ -41,7 +41,7 @@ W-05 - Introduction to JavaScript.
 
 W-06 - Validations of login and sign up to JavaScript.
 
-W-07 - Validations with server to fetch.
+W-07 - Validations on the server with fetch.
 
 ## By GigaTech Software Solutions
 
